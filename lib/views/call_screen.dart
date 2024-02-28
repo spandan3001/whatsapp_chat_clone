@@ -8,7 +8,7 @@ class CallScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body:
-        Text("CALL SCREEN")
+        Center(child: Text("CALL SCREEN"))
     );
   }
 }

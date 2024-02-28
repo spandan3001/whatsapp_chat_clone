@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:whatsapp_chat_clone/common/theme.dart';
 import 'package:whatsapp_chat_clone/views/home_screen.dart';
 
 void main() {
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      home: HomeScreen(),
+    return GetMaterialApp(
+      home: const HomeScreen(),
+      theme: darkTheme,
+
     );
   }
 }
