@@ -1,4 +1,4 @@
-import '../models/char_model.dart';
+import '../models/chat_model.dart';
 
 List<ChatModel> dummyData = [
   ChatModel(
