@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/mock_data/dummy_data.dart';
+import 'animations/profile_image_screen.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -16,10 +17,22 @@ class ChatScreen extends StatelessWidget {
             height: 10.0,
           ),
           ListTile(
-            leading: CircleAvatar(
-              foregroundColor: Theme.of(context).primaryColor,
-              backgroundColor: Colors.grey,
-              backgroundImage: NetworkImage(dummyData[i].avatarUrl),
+            leading: GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => ProfileImageScreen(imageUrl: dummyData[i].avatarUrl,)),
+                );
+              },
+              child: Hero(
+                
+                tag: 'profile-image-tag',
+                child: CircleAvatar(
+                  foregroundColor: Theme.of(context).primaryColor,
+                  backgroundColor: Colors.grey,
+                  backgroundImage: NetworkImage(dummyData[i].avatarUrl),
+                ),
+              ),
             ),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
