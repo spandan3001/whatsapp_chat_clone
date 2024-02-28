@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsapp_chat_clone/controllers/main_controller.dart';
+import 'camera_screen.dart';
+import 'chat_screen.dart';
+import 'status_screen.dart';
+import 'call_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -48,7 +52,12 @@ class _HomeScreenState extends State<HomeScreen>
       ),
       body: TabBarView(
         controller: mainController.tabController,
-        children: const [],
+        children: const [
+          CameraScreen(),
+          ChatScreen(),
+          StatusScreen(),
+          CallScreen(),
+        ],
       ),
       // Show or hide the FAB based on controller state
       floatingActionButton: Obx(
