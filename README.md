@@ -9,7 +9,9 @@ A Flutter application that replicates the functionality of the WhatsApp messagin
 
 
 ## Screenshots
-https://github.com/spandan3001/mcx_final/assets/video/output.webm
+
+https://github.com/spandan3001/whatsapp_chat_clone/assets/73657279/bd80ec57-2cb4-476b-9ee4-0301f882e6c6
+
 
 ## Installation
 
