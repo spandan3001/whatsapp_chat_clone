@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Color.fromRGBO(18, 140, 126, 1);
@@ -7,8 +5,6 @@ const kDarkBgColor = Color.fromRGBO(19, 28, 33, 1);
 const kLightBgColor = Color.fromRGBO(255, 255, 255, 1);
 const kDarkAppBarColor = Color.fromRGBO(31, 44, 52, 1);
 const kDarkTextFieldBgColor = Color.fromRGBO(37, 45, 49, 1);
-
-
 
 final lightTheme = ThemeData.light().copyWith(
   colorScheme: ColorScheme.fromSeed(
@@ -26,7 +22,6 @@ final lightTheme = ThemeData.light().copyWith(
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
     backgroundColor: kPrimaryColor,
   ),
-
 );
 
 final darkTheme = ThemeData.dark().copyWith(
@@ -65,4 +60,14 @@ final darkTheme = ThemeData.dark().copyWith(
     backgroundColor: kPrimaryColor,
     foregroundColor: Colors.white,
   ),
+);
+
+InputDecoration kMessageTextFieldDecoration = const InputDecoration(
+  hintText: 'Message',
+  border: InputBorder.none,
+  focusedBorder: InputBorder.none,
+  enabledBorder: InputBorder.none,
+  errorBorder: InputBorder.none,
+  focusedErrorBorder: InputBorder.none,
+  disabledBorder: InputBorder.none,
 );

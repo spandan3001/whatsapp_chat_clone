@@ -21,9 +21,12 @@ class _HomeScreenState extends State<HomeScreen>
   void initState() {
     super.initState();
     // Initialize the main controller
-    mainController = Get.put(MainController());
+    mainController = Get.find<MainController>();
     // Initialize the controller state
     mainController.init(this);
+
+    // Get chats when the screen initializes
+    mainController.getChats();
   }
 
   @override
@@ -61,15 +64,15 @@ class _HomeScreenState extends State<HomeScreen>
       ),
       // Show or hide the FAB based on controller state
       floatingActionButton: Obx(
-        () => mainController.showFab.value
+            () => mainController.showFab.value
             ? FloatingActionButton(
-                backgroundColor: Colors.green,
-                child: const Icon(
-                  Icons.message,
-                  color: Colors.white,
-                ),
-                onPressed: () => {},
-              )
+          backgroundColor: Colors.green,
+          child: const Icon(
+            Icons.message,
+            color: Colors.white,
+          ),
+          onPressed: () => {},
+        )
             : const SizedBox.shrink(),
       ),
     );

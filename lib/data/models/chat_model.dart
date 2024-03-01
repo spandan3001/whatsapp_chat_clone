@@ -1,8 +1,17 @@
-class ChatModel {
-  final String name;
-  final String message;
-  final String time;
-  final String avatarUrl;
 
-  ChatModel({required this.name, required this.message, required this.time, required this.avatarUrl});
+import 'user_model.dart';
+
+
+class Chat {
+
+  String message;
+  DateTime time;
+  bool isMe;
+
+
+  Chat({
+    required this.message,
+    required this.isMe,
+    required this.time,
+  });
 }
